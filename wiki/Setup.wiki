@@ -34,12 +34,24 @@ $conf['sql_database'] = 'website';
 }}}
 
 If you set *use_db* to 1, the framework will enable PEAR's DB database
-abstraction layer.
+abstraction layer. Use the other SQL related settings to configure your database login.
 
 PEAR's DB database abstraction layer supports over 5 database engines, you might want to read it's manual [http://pear.php.net/manual/en/package.database.db.php PEAR DB Manual]
 
+{{{
+// skin
+$conf['stylesheet'] = array( 'styles.css' );
+$conf['script'] = array( 'scripts.css' );
+$conf['skin_dir'] = 'Skin/';
+}}}
 
+The setting *stylesheet* holds an array of stylesheets. Add more array nodes
+in order to add multiple stylesheets.
 
+{{{
+$conf['stylesheet'] = array( 'styles.css', 'IE6.css', 'IE7.css' );
+}}}
+_Multiple stylesheets attached to your page_
 
 
 
