@@ -82,3 +82,7 @@ $conf['cache'] = 'false';
 This part of the settings sets up the HTML header output, defaulting to XHTML 1.0
 Transitional, cache disabled (REQUIRED for dynamic websites)
 
+== Setting up index.php ==
+The file *index.php* is somewhat of a wrapper, that initiates the framework and
+loads modules into an array of available actions.
+
