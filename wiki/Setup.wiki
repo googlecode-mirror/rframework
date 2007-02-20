@@ -1,4 +1,4 @@
-#summary Setting up the rFramework
+#summary Setting up the rFramework in order to start building your website
 
 = Installation =
 
@@ -35,6 +35,8 @@ $conf['sql_database'] = 'website';
 
 If you set *use_db* to 1, the framework will enable PEAR's DB database
 abstraction layer.
+
+PEAR's DB database abstraction layer supports over 5 database engines, you might want to read it's manual [http://pear.php.net/manual/en/package.database.db.php]PEAR DB Manual
 
 
 
