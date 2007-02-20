@@ -8,6 +8,22 @@ the rFramework, go to the download page to do so!
   # Upload the example *index.php* and *config.php*
   # Upload the folders *Framework*, *Skin* and *Sources* from the archive
 
+Your directory should look like this:
+
+  * Framework/
+      * Pear/
+      * Actions.php
+      * Framework.php
+      * Layout.php
+  * Skin/
+      * error.tpl
+      * index.tpl
+  * Sources/
+      * index.php
+  * config.php
+  * index.php
+  * style.css
+
 == Setting up config.php ==
 
 {{{
