@@ -1,5 +1,5 @@
 #summary Setting up the rFramework in order to start building your website
-#labels Phase-Deploy,Phase-Implementation
+#labels Phase-Deploy,Phase-Implementation,Featured
 
 = Installation =
 
