@@ -1,4 +1,5 @@
 #summary Setting up the rFramework in order to start building your website
+#labels Phase-Deploy,Phase-Implementation
 
 = Installation =
 
@@ -59,7 +60,10 @@ PEAR's DB database abstraction layer supports over 5 database engines, you might
 $conf['stylesheet'] = array( 'styles.css' );
 $conf['script'] = array( 'scripts.css' );
 $conf['skin_dir'] = 'Skin/';
+$conf['actions_dir'] = 'Sources/';
 }}}
+
+The skin files are loaded from *Skin/* and action modules from *Sources/*.
 
 The setting *stylesheet* holds an array of stylesheets. Add more array nodes
 in order to add multiple stylesheets.
@@ -107,3 +111,27 @@ if( !IN_SITE )
 }}}
 
 In module files to check if files are accessed through the wrapper or directly.
+
+{{{
+//------------------------------------
+// Load the Framework                
+//------------------------------------
+require_once( PATH . 'Framework/Layout.php' );
+require_once( PATH . 'Framework/Framework.php' );
+
+//------------------------------------
+// Initialize the Framework
+//------------------------------------
+// The first parameter of Framework()
+// should be the name of the config
+// file. setActionPath sets the path
+// to the action modules.
+//------------------------------------
+$engine = new Framework( 'config.php' );
+$engine->setActionPath( $engine->conf['actions_dir'] );
+}}}
+
+This bit of code requires the layout wrapper and framework engine, initiates the framework
+class and instance it into $engine. 
+
+We set the action modules path to the value stored in config.php, where we'll store all of our action modules.
