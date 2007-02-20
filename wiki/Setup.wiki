@@ -85,3 +85,25 @@ Transitional, cache disabled (REQUIRED for dynamic websites)
 == Setting up index.php ==
 The file *index.php* is somewhat of a wrapper, that initiates the framework and
 loads modules into an array of available actions.
+
+{{{
+//------------------------------------
+// Sets the full path to the website 
+//------------------------------------
+define( 'PATH', dirname( __FILE__ ) ."/" );
+define( 'IN_SITE', true );
+}}}
+
+This bit of code is *required* to make the rFramework run properly.
+The constants that we make called *PATH* is the full path to the website directory.
+the constant *IN_SITE* allows you to do things like this:
+
+{{{
+if( !IN_SITE )
+{
+    echo 'You can not access this file directly!';
+    exit;
+}
+}}}
+
+In module files to check if files are accessed through the wrapper or directly.
