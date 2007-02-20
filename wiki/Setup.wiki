@@ -17,7 +17,7 @@ Your directory should look like this:
       * Layout.php
   * Skin/
       * error.tpl
-      * index.tpl
+      * layout.tpl
   * Sources/
       * index.php
   * config.php
@@ -85,4 +85,3 @@ Transitional, cache disabled (REQUIRED for dynamic websites)
 == Setting up index.php ==
 The file *index.php* is somewhat of a wrapper, that initiates the framework and
 loads modules into an array of available actions.
-
