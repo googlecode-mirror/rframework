@@ -53,6 +53,16 @@ $conf['stylesheet'] = array( 'styles.css', 'IE6.css', 'IE7.css' );
 }}}
 _Multiple stylesheets attached to your page_
 
+It works exactly the same for scripts.
 
+{{{
+// html
+$conf['lineend'] = 'unix';
+$conf['doctype'] = 'XHTML 1.0 Transitional';
+$conf['html_lang'] = 'en';
+$conf['cache'] = 'false';
+}}}
 
+This part of the settings sets up the HTML header output, defaulting to XHTML 1.0
+Transitional, cache disabled (REQUIRED for dynamic websites)
 
